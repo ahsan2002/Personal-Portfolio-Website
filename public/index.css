@@ -1,0 +1,604 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; 
+}
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+html{
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(169, 46, 46, 0.928);
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #271414;
+}
+
+/* navbar css start */
+.navbar{
+  background-color: rgba(245, 240, 240, 95%) !important;
+}
+.navbar-toggler {
+  border: 0 !important;
+}
+
+.navbar-nav {
+  margin-left: auto;
+  margin-right: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.navbar-nav li {
+  margin-right: 10px;
+  text-align: center;
+}
+
+.navbar-nav li a {
+  position: relative;
+  font-size: 19px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black !important;
+  text-align: center;
+}
+
+.navbar-nav li a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: red;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.navbar-nav a:hover:before {
+  width: 100%;
+}
+
+.myn {
+  color: red;
+  /* font-family: 'Source Code Pro', monospace; */
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 0.09em;
+  font-size: 26px;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+
+/* Lines of the Toggler */
+.toggler-icon{
+  width: 30px;
+  height: 3px;
+  background-color: red;
+  display: block;
+  transition: all 0.2s;
+}
+
+/* Adds Space between the lines */
+.middle-bar{
+  margin: 5px auto;
+}
+
+/* State when navbar is opened (START) */
+.navbar-toggler .top-bar {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+.navbar-toggler .middle-bar {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.navbar-toggler .bottom-bar {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+/* State when navbar is opened (END) */
+
+/* State when navbar is collapsed (START) */
+.navbar-toggler.collapsed .top-bar {
+  transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .middle-bar {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+  transform: rotate(0);
+}
+/* State when navbar is collapsed (END) */
+
+/* Color of Toggler when collapsed */
+.navbar-toggler.collapsed .toggler-icon {
+  background-color: #777777;
+}
+/* navbar css end */
+
+
+/* main css start*/
+.main{
+  color: black;
+  height: 38rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.419), rgba(65, 61, 61, 0.97)), url(/assets/images/ah.jpg);
+    margin-top: -30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wave {
+  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.5s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.ref {
+  padding-top: 230px;
+}
+
+.name h3 {
+  font-weight: bold;
+  font-size: 30px;
+}
+.type a {
+  font-family: "Inconsolata", monospace;
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.name h4 {
+  font-size: 25px;
+}
+
+.name1 {
+  color: rgb(195, 52, 52);
+  font-family: 'Josefin Sans', sans-serif;
+}
+/* main css end*/
+
+
+/* about css start*/
+.about1{
+  margin-top: 50px;
+}
+
+.heading{
+  color: red;
+  font-weight: 400;
+}
+
+.about hr{
+    height: 3px;
+    background-color: black;
+    border: none;
+}
+
+.box{
+  position: relative;
+  width: 330px;
+  height: 330px;
+  background: rgba(104, 92, 92, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.box::before{
+  content: '';
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg,#EB3349,#F45C43);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+
+.box:hover:before{
+  inset: -20px 0px;
+}
+
+@keyframes animate{
+
+  0%{
+    transform: rotate(0deg);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+
+}
+
+.box::after{
+  content: '';
+  position: absolute;
+  inset: 6px ;
+  background: #162025;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.content{
+  position: absolute;
+  inset: 30px;
+  border: 6px solid #070a1c;
+  z-index: 3;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.box:hover .content img{
+  opacity: 0;
+}
+
+.content h2{
+  position: relative;
+  font-size: 1.25em;
+  text-align: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.content a{
+  position:relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #070a1c;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.25em;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.content a:hover{
+  letter-spacing: 0.2em;
+
+}
+
+.ab_me{
+  margin-top: 40px;
+  text-align: justify;
+  
+}
+
+.ab_me h6{
+  font-family: 'Merriweather', serif;
+}
+
+.me{
+  color: red;
+  font-weight: bold;
+}
+
+.para{
+  font-size: 20px;
+}
+
+/* about css end*/
+
+/* **********social icons start************************ */
+.find{
+  margin-top: 100px !important;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  color: white;
+  background: #000000;
+  background: -webkit-linear-gradient(to right, #434343,#000000);
+  background: linear-gradient(to right, #434343, #000000); 
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+.socialbtns, .socialbtns ul, .socialbtns li {
+  margin: 0;
+  padding: 5px;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+	width: 40px;
+  height: 40px;
+	color: #000;
+	background-color: #FFF;
+	border: 1px solid #000;
+	padding-top: 12px;
+	border-radius: 22px;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	-o-border-radius: 22px;
+}
+
+.socialbtns .fa-facebook:hover {
+	border: 1px solid #000;
+  box-shadow: 0 2px 10px #ff0b03;
+  transition: .5s;
+}
+.socialbtns .fa-github:hover {
+	border: 1px solid #000;
+  box-shadow: 0 2px 10px #ff0b03;
+  transition: .5s;
+}
+.socialbtns .fa-linkedin:hover {
+	border: 1px solid #000;
+  box-shadow: 0 2px 10px #ff0b03;
+  transition: .5s;
+}
+.socialbtns .fa-instagram:hover {
+	border: 1px solid #000;
+  box-shadow: 0 2px 10px #ff0b03;
+  transition: .5s;
+}
+
+/* **********social icons end************************ */
+
+/* **************skills section start***************************/
+
+.skills {
+  max-width: 50rem;
+  margin: auto;
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 10rem;
+  height: 10rem;
+}
+
+.icon-card {
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 10px 10px 10px #E2DFD2;
+  padding: 20px;
+  margin: 10px;
+  
+}
+
+.icon-card:hover{
+  transition: all ease 0.3s;
+  transform: scale(1.05,1.05);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+  cursor: pointer;
+}
+
+/* **************skills section end************************** */
+
+/* ***************************services section start*************/
+.about{
+  margin-top: 45px;
+  font-family: 'Bree Serif', serif;
+}
+a{
+	text-decoration:none;
+}
+.services{
+  margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+  
+}
+
+.s-box-container{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.s-box{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width:270px;
+	padding: 20px 25px;
+	height: 270px;
+	margin: 30px;
+	position: relative;
+  background-color: #fff;
+  border-radius: 11px;
+  box-shadow: 10px 10px 10px #E2DFD2;
+}
+.s-box img{
+	height: 120px;
+}
+.s-box h1{
+	color:#ff0101;
+	letter-spacing: 1px;
+	font-size: 1.5rem;
+	margin-bottom: 8px;
+	
+}
+
+.s-box:hover{
+	transition: all ease 0.3s;
+	box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+  transform: scale(1.05,1.05);
+  cursor: pointer;
+}
+
+@media(max-width:1050px){
+	.s-box-container{
+		flex-wrap: wrap;
+		
+	}	
+	.services{
+		height: auto;
+	}
+	.s-heading{
+		margin: 15px;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+	
+}
+/* ***************************services section end*************/
+
+
+/* ***************************project section start*************/
+a{
+  text-decoration: none;
+}
+
+#project{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 50px 0px;
+}
+
+
+
+.portfolio-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.portfolio-box{
+  width:330px;
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid rgb(38, 37, 37);
+}
+
+.portfolio-box:hover{
+  transition: all ease 0.3s;
+  transform: scale(1.05,1.05);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.7);
+}
+
+.portfolio-box img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+@media(max-width:740px){
+.portfolio-box{
+  width:80%;
+}
+}
+@media(max-width:550px){
+
+  .project-heading h3
+  {
+      font-size: 1.8rem;
+  }
+}
+
+/* ***************************project section end*************/
+
+
+/* ****************contact section start**************** */
+.flex-container{
+  display:-webkit-flex;
+  display:flex;
+  -webkit-flex-wrap:wrap;
+  flex-wrap:wrap;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -webkit-align-content:center;
+  align-content:center;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .contact_img{
+     width: 300px;
+    }
+  }
+
+  /* ****************contact section end**************** */
