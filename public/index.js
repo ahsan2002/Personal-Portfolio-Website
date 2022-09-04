@@ -60,3 +60,8 @@ var TxtType = function (el, toRotate, period) {
   window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   }
+
+
+var year =document.getElementById("current-year");
+
+year.innerHTML=new Date().getFullYear();
