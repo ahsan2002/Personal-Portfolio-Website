@@ -568,6 +568,7 @@ a{
   overflow: hidden;
 }
 
+/* media query for heding and profile box */
 @media(max-width:740px){
 .portfolio-box{
   width:80%;
@@ -600,7 +601,7 @@ a{
     color: black;
   }
 
-
+/* media query for contact image */
   @media only screen and (max-width: 600px) {
     .contact_img{
      width: 300px;
